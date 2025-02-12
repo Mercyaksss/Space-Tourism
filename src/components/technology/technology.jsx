@@ -54,7 +54,7 @@ function Technology({ technology }) {
               >
                 <motion.p className='preset-4'>THE TERMINOLOGY...</motion.p>
                 <motion.p className='preset-3'>{name}</motion.p>
-                <motion.p className='preset-9'>{description}</motion.p>
+                <motion.p className='preset-9 description'>{description}</motion.p>
               </motion.div>
             </AnimatePresence>
           </div>

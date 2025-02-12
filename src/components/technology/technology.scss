@@ -133,8 +133,11 @@
                 &-middle{
                     order: 3;
                     text-align: center;
-                    box-sizing: border-box;
-                    padding: 0 10px;
+                    height: auto;
+
+                    .description{
+                        width: 400px;
+                    }
                 }
             }
         }
