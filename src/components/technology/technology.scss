@@ -135,9 +135,7 @@
                     text-align: center;
                     height: auto;
 
-                    .description{
-                        width: 400px;
-                    }
+                  
                 }
             }
         }
@@ -155,6 +153,10 @@
                 width: 90%;
                 margin: auto;
                 padding: 10px 5px;
+            }
+
+            .description{
+                width: 400px;
             }
         }
     }
