@@ -1,5 +1,5 @@
 .home{
-    background-image: url(assets/home/background-home-desktop.jpg);
+    background-image: url(../assets/home/background-home-desktop.jpg);
 
     .home-main{
         padding-top: 300px;
@@ -46,7 +46,7 @@
 
 @media (max-width: 1115px){
     .home{
-        background-image: url(assets/home/background-home-tablet.jpg) ;
+        background-image: url(../assets/home/background-home-tablet.jpg) ;
         background-size: cover;
         height: 130vh;
         padding-bottom: 50px;
@@ -56,6 +56,11 @@
             padding-top: 40px;
             margin: auto;
             height: 95%;
+            transition: background-color 0.3s ease-in;
+
+            &:hover{
+                border: 1px solid #fff;
+            }
 
             .home-content{
                 padding: 0 20px;
@@ -66,7 +71,6 @@
                     margin: auto;
                     text-align: center;
                 }
-             
             }
         }
     }
@@ -74,7 +78,7 @@
 
 @media (max-width: 700px){
     .home{
-        background-image: url(assets/home/background-home-mobile.jpg) ;
+        background-image: url(../assets/home/background-home-mobile.jpg) ;
         min-width: 420px;
 
         .home-main{
@@ -90,7 +94,7 @@
                 }
 
                 &-left{
-                    width: 400px;
+                    width: 100%;
 
                     .text-1{
                         font-size: 20px;
