@@ -1,0 +1,157 @@
+.technology{
+    background-image: url(assets/technology/background-technology-desktop.jpg);
+
+    &-main{
+        width: 1275px;
+        height: 734px;
+        margin: auto;
+
+        .technology-content{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p{
+                margin: 14px 0;
+            }
+
+            &-left{
+                display: flex;
+                flex-direction: column;
+                gap: 27px;
+                height: 301px;
+
+                .number{
+                    width: 80px;
+                    height: 80px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 100%;
+                    color: #fff;
+                    border: 1px solid #636670;
+                    transition: background-color 0.3s ease-in;
+
+                    &:hover{
+                        background-color: #ffffff91;
+                        color: #262932;
+                    }
+
+                    &.active{
+                        background-color: #fff;
+                        color: #262932;
+                    }
+                }
+            }
+
+            &-middle{
+                width: 491px;
+                height: 301px;
+            }
+
+            &-right{
+                width: 608px;
+
+                img{
+                    width: 600px;
+                    height: 600px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px){
+    .technology{
+
+        &-main{
+
+            .technology-content{
+                box-sizing: border-box;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+    
+                &-left{
+                    gap: 60px;
+                    margin-left: 20px;
+    
+                    .number{
+                      width: 60px;
+                      height: 60px;
+                   
+                    }
+                }
+    
+                &-middle{
+                    width: 491px;
+                    height: 301px;
+                }
+    
+                &-right{
+                    width: 550px;
+
+                    img{
+                        width: 400px;
+                        height: 450px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+@media (max-width: 1115px){
+    .technology{
+        background-image: url(assets/technology/background-technology-tablet.jpg);
+        height: 160vh;
+
+        &-main{
+            width: 100%;
+            height: 1200px;
+
+            .technology-content{
+                flex-direction: column;
+
+                &-left{
+                    order: 2;
+                    flex-direction: row; 
+                    justify-content: center; 
+                    height: auto; 
+                    margin: 40px 0; 
+                }
+
+                &-right{
+                    order: 1;
+                    width: 100%;
+
+                    img{
+                        width: 100%;
+                        height: 350px;
+                    }
+                }
+
+                &-middle{
+                    order: 3;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px){
+    .technology{
+        min-width: 420px;
+        height: 150vh;
+
+        .technology-content{
+            
+            p{
+                width: 90%;
+                margin: auto;
+                padding: 10px 5px;
+            }
+        }
+    }
+}

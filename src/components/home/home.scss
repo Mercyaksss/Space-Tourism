@@ -1,0 +1,106 @@
+.home{
+    background-image: url(assets/home/background-home-desktop.jpg);
+
+    .home-main{
+        padding-top: 300px;
+
+        .home-content{
+            box-sizing: border-box;
+            padding: 0 20px;
+            height: 343px;
+            max-width: 1110px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: auto;
+
+            &-left{
+                width: 540px;
+            }
+
+            &-right {
+                width: 272px;
+                height: 272px;
+                padding: 60px;
+                border-radius: 100%;
+                transition: transform 2s ease-in-out; 
+
+                &:hover {
+                    background-color: hsl(0 0% 100% / 0.1);
+                    transform: scale(1.1);
+                }
+            
+                button {
+                    width: 272px;
+                    height: 272px;
+                    background-color: white;
+                    color: #0b0f17;
+                    border-radius: 50%;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1115px){
+    .home{
+        background-image: url(assets/home/background-home-tablet.jpg) ;
+        background-size: cover;
+        height: 130vh;
+        padding-bottom: 50px;
+
+        .home-main{
+            max-width: 800px;
+            padding-top: 40px;
+            margin: auto;
+            height: 95%;
+
+            .home-content{
+                padding: 0 20px;
+                height: 100%;
+                flex-direction: column;
+
+                &-left, &-right{
+                    margin: auto;
+                    text-align: center;
+                }
+             
+            }
+        }
+    }
+}
+
+@media (max-width: 700px){
+    .home{
+        background-image: url(assets/home/background-home-mobile.jpg) ;
+        min-width: 420px;
+
+        .home-main{
+
+            .home-content{
+                padding: 0 20px;
+                height: 100%;
+                flex-direction: column;
+
+                &-left, &-right{
+                    margin: auto;
+                    text-align: center;
+                }
+
+                &-left{
+                    width: 400px;
+
+                    .text-1{
+                        font-size: 20px;
+                    }
+                    
+                    .text-2{
+                        font-size: 80px
+                    }
+                }
+            }
+        }   
+    }
+}

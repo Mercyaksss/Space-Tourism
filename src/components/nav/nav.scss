@@ -1,0 +1,131 @@
+nav {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    height: 136px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    z-index: 1000;
+
+    .background {
+        background:hsl(0 0% 100% / 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(8px);  
+    }
+
+    .logo{
+        width: 48px;
+        height: 48px;
+        padding-left: 80px;
+    }
+
+    .menu{
+        width: 24px;
+        height: 21px;
+        display: none;
+    }
+
+    .line {
+        width: 600px;
+        height: 2px;
+        z-index: 6;
+        position: relative; 
+        left: 50px;       
+    }
+
+    .nav-links {
+        width: 900px;
+        height: 100px;
+        display: flex;
+        padding-right: 50px;
+        align-items: center;
+        justify-content: right;
+        gap: 48px;
+        z-index: 5;
+
+        .nav-li {
+            list-style: none;
+            background: transparent;
+            position: relative;                                                                             
+            cursor: pointer;
+            color: white; 
+            text-decoration: none; 
+          
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -40px;
+                left: 0;
+                width: 0;
+                height: 3px;
+                background-color: white;
+                transition: width 0.3s ease-in-out;
+            }
+            
+            &.active::after {
+                width: 100%;
+            }
+
+            span{
+                margin-right: 10px;
+                font-weight: 700;
+            }
+        }
+
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+}
+
+@media (max-width: 1115px){
+    nav{
+        gap: 60px;
+
+        .line{
+            display: none;
+        }
+
+        .nav-links{
+            width: 600px;
+
+            li{
+                span{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px){
+    nav{
+        min-width: 420px;
+
+        .menu{
+            display: block;
+
+            &.hidden{
+                display: none;
+            }
+        }
+      
+        .background{
+            background-color: transparent; 
+            width: 24px;
+            height: 21px;
+        }
+        
+        .nav-links{
+            background: transparent;
+
+            li{
+                display: none;
+            }
+        }
+    }
+}
+

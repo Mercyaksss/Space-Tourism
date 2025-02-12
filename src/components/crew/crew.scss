@@ -1,0 +1,139 @@
+.crew{
+    background-image: url(assets/crew/background-crew-desktop.jpg);
+
+    &-main{
+        width: 1110px;
+        margin: auto;
+
+        .crew-content{
+            margin-top: 80px;
+            display: flex;
+            justify-content: space-between;
+
+            &-left{
+                width: 539px;
+
+                .left-text{
+                    margin-top: 120px;
+
+                    .role{
+                        color: #636670;
+                    }
+                }
+
+                .role, .name{
+                    margin: 20px 0;
+                }
+
+                .bullet-container{
+                    display: flex;
+                    gap: 40px;
+                    margin-top: 160px;
+
+                    .bullet{
+                        width: 15px;
+                        height: 15px;
+                        background-color: rgba(255, 255, 255, 0.514);
+                        border-radius: 50%;
+                        transition: background-color 0.3s ease;
+
+                        &:hover{
+                            background: white;
+                        }
+
+                        &.active {
+                            background-color: white;
+                        }
+                    }
+                }
+            }
+
+            &-right{
+                position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 150px;
+                    background: linear-gradient(
+                        to bottom,
+                        rgba(11, 14, 23, 0) 0%,
+                        rgba(11, 14, 23, 1) 100%
+                    );
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1115px){
+    .crew{
+        background-image: url(assets/crew/background-crew-tablet.jpg);
+        height: 200vh;
+
+        &-main{
+            max-width: 700px;
+            margin: auto;
+
+            .crew-content{
+                flex-direction: column;
+                text-align: center;
+            
+                &-left, &-right{
+                    margin: auto;
+                }
+
+                &-left{
+                    width: 700px;
+                    
+                    .left-text{
+                        margin-top: 20px;
+                    }
+
+                    .bullet-container{
+                        gap: 10px;
+                        width: 150px;
+                        margin: auto;
+                        padding: 50px 0;
+
+                        .bullet{
+                            width: 10px;
+                            height: 10px;
+                            margin: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px){
+    .crew{
+        background-image: url(assets/crew/background-crew-mobile.jpg);
+        min-width: 420px;
+        height: 180vh;
+
+        &-main{
+            margin: auto;
+            width: 400px;
+
+            .crew-content{
+                &-left{
+                    width: 100%;
+                }
+
+                &-right{
+                    width: 100%;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        
+    }
+}
